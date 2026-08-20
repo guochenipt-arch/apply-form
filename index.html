@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商標註冊申請資料表｜國宸國際商標事務所</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#182A3D;
+    --ink-2:#25405A;
+    --paper:#F6F2E9;
+    --paper-2:#EFE9DA;
+    --seal:#AE2B26;
+    --seal-dark:#8B211D;
+    --brass:#B4934F;
+    --line:rgba(24,42,61,0.14);
+    --text:#20211D;
+    --text-soft:rgba(32,33,29,0.68);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--text);
+    font-family:'Noto Sans TC', sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+
+  /* subtle paper texture via layered gradients */
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(24,42,61,0.035) 0, transparent 40%),
+      radial-gradient(circle at 85% 75%, rgba(174,43,38,0.035) 0, transparent 45%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  a{color:inherit;}
+
+  .wrap{max-width:920px; margin:0 auto; padding:0 28px; position:relative; z-index:1;}
+
+  /* ===== Header ===== */
+  header{
+    padding:22px 0 18px;
+    border-bottom:1px solid var(--line);
+  }
+  .header-row{
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .brand{
+    display:flex; align-items:center; gap:12px;
+  }
+  .brand-mark{
+    width:40px; height:40px; border-radius:50%;
+    border:1.5px solid var(--seal);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Noto Serif TC', serif; font-weight:900; font-size:15px;
+    color:var(--seal); letter-spacing:0; flex-shrink:0;
+  }
+  .brand-text{
+    font-family:'Noto Serif TC', serif; font-weight:700; font-size:16px; color:var(--ink);
+    letter-spacing:0.04em;
+  }
+  .brand-text small{
+    display:block; font-family:'Noto Sans TC', sans-serif; font-weight:400; font-size:11px;
+    color:var(--text-soft); letter-spacing:0.12em; margin-top:2px;
+  }
+  .header-cta{
+    font-size:12.5px; color:var(--text-soft); text-align:right; display:none;
+  }
+  @media (min-width:600px){ .header-cta{display:block;} }
+
+  /* ===== Hero ===== */
+  .hero{
+    padding:64px 0 40px;
+    position:relative;
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:12.5px; letter-spacing:0.18em; color:var(--seal); font-weight:600;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:""; width:22px; height:1px; background:var(--seal);
+  }
+  h1{
+    font-family:'Noto Serif TC', serif;
+    font-weight:900;
+    font-size:clamp(30px, 5.4vw, 46px);
+    line-height:1.35;
+    margin:0 0 20px;
+    color:var(--ink);
+    letter-spacing:0.01em;
+  }
+  h1 .accent{ color:var(--seal); }
+  .lede{
+    font-size:16.5px;
+    color:var(--text-soft);
+    max-width:56ch;
+    margin:0 0 30px;
+  }
+  .lede strong{ color:var(--ink); font-weight:600; }
+
+  .trust-row{
+    display:flex; flex-wrap:wrap; gap:10px 28px;
+    padding-top:24px; border-top:1px solid var(--line);
+    font-size:13px; color:var(--text-soft);
+  }
+  .trust-row span{ display:flex; align-items:center; gap:7px; white-space:nowrap; }
+  .trust-row .dot{ width:5px; height:5px; border-radius:50%; background:var(--brass); flex-shrink:0; }
+
+  /* ===== Steps ===== */
+  .steps{
+    padding:36px 0 8px;
+  }
+  .steps-title{
+    font-family:'Noto Serif TC', serif; font-weight:700; font-size:19px; color:var(--ink);
+    margin:0 0 22px;
+  }
+  .step-list{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;
+  }
+  @media (max-width:680px){ .step-list{grid-template-columns:1fr;} }
+  .step{
+    border:1px solid var(--line);
+    background:rgba(255,255,255,0.35);
+    padding:20px 20px 22px;
+    border-radius:2px;
+    position:relative;
+  }
+  .step-num{
+    font-family:'Noto Serif TC', serif; font-weight:700; font-size:12px;
+    color:var(--seal); border:1px solid var(--seal); border-radius:50%;
+    width:24px; height:24px; display:flex; align-items:center; justify-content:center;
+    margin-bottom:14px;
+  }
+  .step h3{
+    font-size:15px; font-weight:700; color:var(--ink); margin:0 0 8px;
+    font-family:'Noto Sans TC', sans-serif;
+  }
+  .step p{
+    font-size:13.5px; color:var(--text-soft); margin:0; line-height:1.7;
+  }
+
+  /* ===== Form section ===== */
+  .form-section{
+    padding:56px 0 40px;
+  }
+  .dossier{
+    position:relative;
+    background:#FFFDF8;
+    border:1px solid var(--line);
+    border-radius:6px;
+    box-shadow:0 1px 0 var(--line), 0 24px 50px -30px rgba(24,42,61,0.4);
+    overflow:hidden;
+  }
+  .dossier::before{
+    content:"";
+    display:block;
+    height:5px;
+    background:linear-gradient(90deg, var(--ink) 0%, var(--ink-2) 45%, var(--seal) 100%);
+  }
+  .dossier-head{
+    display:flex; align-items:flex-start; justify-content:space-between; gap:16px;
+    padding:28px 32px 22px;
+    border-bottom:1px dashed var(--line);
+  }
+  .dossier-head h2{
+    font-family:'Noto Serif TC', serif; font-weight:700; font-size:21px; color:var(--ink);
+    margin:0 0 6px;
+  }
+  .dossier-head p{
+    margin:0; font-size:13px; color:var(--text-soft);
+  }
+
+  /* the seal / signature element */
+  .seal-stamp{
+    flex-shrink:0;
+    width:78px; height:78px;
+    border:2px solid var(--seal);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    transform:rotate(-9deg);
+    opacity:0.92;
+    position:relative;
+  }
+  .seal-stamp::after{
+    content:"";
+    position:absolute; inset:6px;
+    border:1px solid var(--seal);
+    border-radius:50%;
+  }
+  .seal-stamp span{
+    font-family:'Noto Serif TC', serif;
+    font-weight:900;
+    color:var(--seal);
+    font-size:12px;
+    line-height:1.3;
+    text-align:center;
+    letter-spacing:0.06em;
+  }
+  @media (max-width:520px){ .seal-stamp{ display:none; } }
+
+  .form-frame-holder{
+    padding:22px 22px 8px;
+    background:var(--paper-2);
+  }
+  .form-frame-inner{
+    border:1px solid var(--line);
+    border-radius:4px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
+  }
+  iframe.gform{
+    width:100%;
+    height:1400px;
+    border:none;
+    display:block;
+    background:#fff;
+  }
+  .frame-caption{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:10px 4px 16px;
+    font-size:11.5px; color:var(--text-soft); letter-spacing:0.02em;
+  }
+  .frame-caption a{
+    color:var(--ink-2); font-weight:600; text-decoration:none; border-bottom:1px solid var(--line);
+  }
+  .frame-caption a:hover{ border-color:var(--seal); color:var(--seal); }
+
+  .dossier-foot{
+    padding:18px 32px 26px;
+    font-size:12px;
+    color:var(--text-soft);
+    display:flex; align-items:center; gap:8px;
+  }
+  .dossier-foot .lock{ color:var(--brass); }
+
+  .form-fallback{
+    display:none;
+  }
+  .form-fallback a{
+    color:var(--seal); font-weight:600; text-decoration:underline; text-underline-offset:3px;
+  }
+
+  /* ===== Footer ===== */
+  footer{
+    border-top:1px solid var(--line);
+    padding:34px 0 46px;
+    margin-top:20px;
+  }
+  .footer-grid{
+    display:flex; flex-wrap:wrap; gap:26px 40px; justify-content:space-between;
+  }
+  .footer-brand{
+    font-family:'Noto Serif TC', serif; font-weight:700; font-size:15px; color:var(--ink);
+  }
+  .footer-brand small{
+    display:block; font-family:'Noto Sans TC',sans-serif; font-weight:400; font-size:12px;
+    color:var(--text-soft); margin-top:6px; max-width:34ch;
+  }
+  .footer-offices{
+    font-size:12.5px; color:var(--text-soft); display:flex; flex-wrap:wrap; gap:6px 18px;
+  }
+  .copyright{
+    margin-top:26px; padding-top:18px; border-top:1px solid var(--line);
+    font-size:11.5px; color:var(--text-soft); opacity:0.8;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <div class="brand">
+      <div class="brand-mark">國宸</div>
+      <div class="brand-text">國宸國際商標事務所
+        <small>GUOCHEN INTERNATIONAL TRADEMARK OFFICE</small>
+      </div>
+    </div>
+    <div class="header-cta">TIPO 認證商標代理人．服務 115+ 國家</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">商標申請．最後一哩路</div>
+    <h1>檢索結果已經確認，<br>只差一份<span class="accent">申請人資料</span>就能遞件。</h1>
+    <p class="lede">
+      感謝您完成商標檢索評估。接下來我們需要正式的申請人資料，用來製作送交智慧財產局的商標註冊申請書。
+      <strong>填寫約需 3–5 分鐘</strong>，資料請務必與證件、公司登記資訊一致，以免影響審查進度。
+    </p>
+    <div class="trust-row">
+      <span><i class="dot"></i>TIPO 商標代理人證書字號 TT000588</span>
+      <span><i class="dot"></i>台南／高雄／台北／台中 四地服務</span>
+      <span><i class="dot"></i>資料僅供本案申請建檔使用，絕不對外流用</span>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <h3 class="steps-title">填完之後，接下來會發生什麼事</h3>
+    <div class="step-list">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>填寫申請人資料</h3>
+        <p>提供申請人身分、聯絡方式與商標名稱／LOGO，作為申請書建檔依據。</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>製作申請書並核對</h3>
+        <p>承辦人員依您提供的資料製作商標註冊申請書，並與您確認商品／服務類別與細節。</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>遞交智慧局</h3>
+        <p>確認無誤後正式送出申請，並將收文號與後續審查時程通知您。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="form-section" id="form">
+  <div class="wrap">
+    <div class="dossier">
+      <div class="dossier-head">
+        <div>
+          <h2>商標註冊申請資料表</h2>
+          <p>請據實填寫，標示 * 之欄位為必填項目，共三個頁面。</p>
+        </div>
+        <div class="seal-stamp"><span>國宸<br>商標</span></div>
+      </div>
+
+      <div class="form-frame-holder">
+        <div class="form-frame-inner">
+          <iframe
+            class="gform"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSc9qjGTdxLWC53wZ2Npr4P2TVQLESPkVcE8jhOuNLgjhPi-bQ/viewform?embedded=true"
+            title="商標註冊申請資料表">
+            載入中…
+          </iframe>
+        </div>
+        <div class="frame-caption">
+          <span>表單全程加密傳輸，共三個頁面</span>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9qjGTdxLWC53wZ2Npr4P2TVQLESPkVcE8jhOuNLgjhPi-bQ/viewform" target="_blank" rel="noopener">在新分頁開啟表單 ↗</a>
+        </div>
+      </div>
+
+      <div class="dossier-foot">
+        <span class="lock">🔒</span> 填寫內容僅國宸國際商標事務所可讀取，送出後將直接進入案件建檔流程，無需重複聯繫。
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        國宸國際商標事務所
+        <small>提供台灣及全球 115+ 國家商標／專利申請、爭議與品牌保護服務。</small>
+      </div>
+      <div class="footer-offices">
+        <span>台南</span><span>高雄</span><span>台北</span><span>台中</span>
+      </div>
+    </div>
+    <div class="copyright">© 國宸國際商標事務所．本表單僅用於商標申請案件建檔，資料保存依本所隱私政策辦理。</div>
+  </div>
+</footer>
+
+</body>
+</html>
